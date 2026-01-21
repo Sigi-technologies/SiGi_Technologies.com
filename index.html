@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,10 +25,6 @@
             --card-bg: rgba(18, 24, 40, 0.8);
             --glow-blue: 0 0 15px rgba(0, 247, 255, 0.7);
             --glow-pink: 0 0 15px rgba(255, 0, 212, 0.7);
-            --newyear-gold: #ffd700;
-            --newyear-silver: #c0c0c0;
-            --newyear-purple: #9b59b6;
-            --future-blue: #3498db;
         }
 
         body {
@@ -37,240 +33,7 @@
             overflow-x: hidden;
             position: relative;
             min-height: 100vh;
-        }
-
-        /* New Year Banner */
-        .newyear-banner {
-            position: fixed;
-            top: -100px;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(135deg, var(--newyear-purple), var(--future-blue));
-            color: white;
-            text-align: center;
-            padding: 15px;
-            z-index: 2000;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            transition: top 0.8s ease;
-            border-bottom: 3px solid var(--newyear-gold);
-        }
-
-        .newyear-banner.show {
-            top: 0;
-        }
-
-        .banner-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .banner-message {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .banner-message i {
-            color: var(--newyear-gold);
-            animation: spin 4s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .close-banner {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .close-banner:hover {
-            background: white;
-            color: var(--newyear-purple);
-        }
-
-        /* New Year Greetings Section */
-        .newyear-section {
-            padding: 5rem 5%;
-            background: linear-gradient(to bottom, rgba(10, 14, 23, 0.9), rgba(52, 152, 219, 0.1));
-            position: relative;
-            overflow: hidden;
-            margin: 3rem 0;
-            border-radius: 10px;
-            border: 1px solid rgba(155, 89, 182, 0.3);
-            box-shadow: 0 0 30px rgba(155, 89, 182, 0.2);
-        }
-
-        .newyear-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            position: relative;
-            color: var(--newyear-gold);
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-        }
-
-        .newyear-title::after {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--newyear-purple), var(--newyear-gold), var(--future-blue));
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .newyear-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .newyear-message {
-            font-size: 1.4rem;
-            line-height: 1.8;
-            margin-bottom: 2.5rem;
-            color: var(--text-light);
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--newyear-purple);
-            border-right: 5px solid var(--future-blue);
-        }
-
-        .newyear-icons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .newyear-icon {
-            font-size: 2.5rem;
-            color: var(--newyear-gold);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .newyear-icon:nth-child(2) {
-            animation-delay: 0.5s;
-            color: var(--newyear-purple);
-        }
-
-        .newyear-icon:nth-child(3) {
-            animation-delay: 1s;
-            color: var(--future-blue);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .newyear-buttons {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .btn-newyear {
-            padding: 0.9rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-newyear-primary {
-            background: linear-gradient(135deg, var(--newyear-purple), var(--future-blue));
-            color: white;
-            border: 2px solid var(--newyear-gold);
-        }
-
-        .btn-newyear-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(155, 89, 182, 0.4);
-        }
-
-        .btn-newyear-secondary {
-            background-color: transparent;
-            color: var(--newyear-gold);
-            border: 2px solid var(--newyear-gold);
-        }
-
-        .btn-newyear-secondary:hover {
-            background-color: var(--newyear-gold);
-            color: var(--primary-dark);
-        }
-
-        /* New Year Decorations */
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 2px;
-            opacity: 0.8;
-            z-index: 1;
-        }
-
-        .star-decoration {
-            position: absolute;
-            color: var(--newyear-gold);
-            font-size: 1.5rem;
-            z-index: 1;
-            animation: twinkle 2s infinite;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-
-        /* Animated background elements */
-        .background-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background-color: var(--accent-electric);
-            border-radius: 50%;
-            box-shadow: var(--glow-blue);
+            background-image: linear-gradient(135deg, #0a0e17 0%, #121828 100%);
         }
 
         /* Navigation */
@@ -279,7 +42,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 5%;
-            background-color: rgba(10, 14, 23, 0.9);
+            background-color: rgba(10, 14, 23, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -306,7 +69,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .nav-item {
@@ -349,17 +112,6 @@
         .nav-item.ai-highlight:hover {
             color: var(--accent-ai-light);
             box-shadow: var(--glow-pink);
-        }
-
-        .nav-item.newyear-highlight {
-            color: var(--newyear-gold);
-            background-color: rgba(155, 89, 182, 0.1);
-            border: 1px solid rgba(155, 89, 182, 0.3);
-        }
-
-        .nav-item.newyear-highlight:hover {
-            color: var(--newyear-gold);
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
         }
 
         /* Hero Section */
@@ -443,6 +195,7 @@
             text-align: center;
             margin-bottom: 3rem;
             position: relative;
+            color: var(--accent-electric);
         }
 
         .section-title::after {
@@ -450,10 +203,11 @@
             position: absolute;
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, transparent, var(--accent-electric), transparent);
+            background: var(--accent-electric);
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
+            border-radius: 2px;
         }
 
         .projects-grid {
@@ -492,29 +246,6 @@
             border-color: var(--accent-ai);
         }
 
-        .project-card.newyear-highlight {
-            border-color: rgba(255, 215, 0, 0.3);
-            position: relative;
-        }
-
-        .project-card.newyear-highlight::before {
-            content: '2026';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: linear-gradient(135deg, var(--newyear-purple), var(--newyear-gold));
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .project-card.newyear-highlight:hover {
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-            border-color: var(--newyear-gold);
-        }
-
         .project-icon {
             font-size: 3.5rem;
             color: var(--accent-electric);
@@ -523,10 +254,6 @@
 
         .ai-card .project-icon {
             color: var(--accent-ai);
-        }
-
-        .newyear-highlight .project-icon {
-            color: var(--newyear-gold);
         }
 
         .project-title {
@@ -542,7 +269,7 @@
         }
 
         .project-release {
-            color: var(--newyear-gold);
+            color: var(--accent-electric);
             font-weight: bold;
             margin-top: 1rem;
             font-style: italic;
@@ -606,24 +333,13 @@
             margin-bottom: 0.5rem;
         }
 
-        .footer-newyear {
-            color: var(--newyear-gold);
-            margin-top: 10px;
-            font-size: 1rem;
-        }
-
         /* Responsive adjustments */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 2.8rem;
             }
-
             .nav-links {
                 gap: 1rem;
-            }
-
-            .newyear-title {
-                font-size: 2.2rem;
             }
         }
 
@@ -632,75 +348,33 @@
                 flex-direction: column;
                 gap: 1.5rem;
             }
-
             .nav-links {
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
             }
-
             .hero h1 {
                 font-size: 2.2rem;
             }
-
             .hero p {
                 font-size: 1.1rem;
             }
-
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-
             .btn {
                 width: 100%;
                 max-width: 300px;
                 justify-content: center;
             }
-
             .projects-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .newyear-title {
-                font-size: 1.8rem;
-            }
-
-            .newyear-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-newyear {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-
-            .banner-message {
-                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- New Year Banner -->
-    <div class="newyear-banner" id="newyearBanner">
-        <div class="banner-content">
-            <div class="banner-message">
-                <i class="fas fa-star"></i>
-                <span>🎊 Happy New Year 2026 from SiGi Technologies! 🎆</span>
-                <i class="fas fa-rocket"></i>
-            </div>
-            <button class="close-banner" id="closeBanner">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Animated background elements -->
-    <div class="background-elements" id="particles-container"></div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="logo">
@@ -710,9 +384,6 @@
         <div class="nav-links">
             <a href="index.html" class="nav-item">Home</a>
             <a href="#projects" class="nav-item">Projects</a>
-            <a href="#newyear" class="nav-item newyear-highlight">
-                <i class="fas fa-calendar-star"></i> 2026 Preview
-            </a>
             <a href="open-domotics.html" class="nav-item">Open Domotics</a>
             <a href="illumination-system.html" class="nav-item">Sigi Custom Illumination</a>
             <a href="sigi-ai.html" class="nav-item ai-highlight">Sigi AI</a>
@@ -735,57 +406,12 @@
             </div>
         </section>
 
-        <!-- New Year Greetings Section -->
-        <section class="newyear-section" id="newyear">
-            <div class="newyear-decorations" id="newyearDecorations"></div>
-            <h2 class="newyear-title">🎊 Welcome to 2026! 🚀</h2>
-            <div class="newyear-content">
-                <div class="newyear-icons">
-                    <i class="fas fa-rocket newyear-icon"></i>
-                    <i class="fas fa-microchip newyear-icon"></i>
-                    <i class="fas fa-brain newyear-icon"></i>
-                </div>
-                <div class="newyear-message">
-                    <p>Dear Community, Supporters, and Technology Enthusiasts,</p>
-                    <p>As we welcome <strong>2026</strong>, the entire team at <strong>SiGi Technologies</strong> extends our warmest wishes for a year filled with innovation, progress, and technological breakthroughs! 🎆</p>
-                    
-                    <p style="margin: 1.5rem 0; padding: 1rem; background: rgba(52, 152, 219, 0.1); border-radius: 10px; border-left: 4px solid var(--newyear-gold);">
-                        <strong>🚀 MAJOR ANNOUNCEMENT:</strong><br>
-                        We are excited to announce that our flagship <strong>Open Domotics</strong> project will be released in <strong>2026</strong>! This revolutionary open-source home automation system will transform how you interact with your living space.
-                    </p>
-                    
-                    <p>Looking ahead, we aspire to lead innovation in <strong>edge computing</strong>, bringing intelligent processing closer to where data is generated. Our vision for 2026 includes:</p>
-                    <ul style="text-align: left; margin: 1rem 2rem;">
-                        <li>Edge-native AI solutions for smart homes</li>
-                        <li>Real-time processing without cloud dependency</li>
-                        <li>Enhanced privacy and security at the edge</li>
-                        <li>Energy-efficient computing for sustainable technology</li>
-                    </ul>
-                    
-                    <p>Thank you for being part of our journey. Your support fuels our passion for creating accessible open-source technology that empowers everyone.</p>
-                    <p><strong>Here's to a groundbreaking 2026 filled with innovation and success!</strong> ✨</p>
-                    <p style="margin-top: 1.5rem; color: var(--newyear-gold); font-style: italic;">
-                        Innovatively yours,<br>
-                        The SiGi Technologies Team
-                    </p>
-                </div>
-                <div class="newyear-buttons">
-                    <a href="https://github.com/Sigi-technonogies" target="_blank" class="btn-newyear btn-newyear-primary">
-                        <i class="fas fa-code-branch"></i> Contribute on GitHub
-                    </a>
-                    <button id="shareNewYearWishes" class="btn-newyear btn-newyear-secondary">
-                        <i class="fas fa-share-alt"></i> Share the Vision
-                    </button>
-                </div>
-            </div>
-        </section>
-
         <!-- Projects Section -->
         <section class="projects" id="projects">
             <h2 class="section-title">Our Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 - Open Domotics (Coming 2026) -->
-                <a href="open-domotics.html" class="project-card newyear-highlight">
+                <!-- Project 1 - Open Domotics -->
+                <a href="open-domotics.html" class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -832,64 +458,31 @@
     <footer>
         <div class="footer-logo">SiGi Technologies</div>
         <p>Open Source Innovation for Tomorrow's Homes | © 2025-2026 SiGi Technologies. All open source projects.</p>
-        <p class="footer-newyear">🎊 Wishing You a Innovative and Successful 2026! 🚀</p>
-        <p style="margin-top: 10px; font-size: 0.8rem; color: var(--newyear-gold);">Open Domotics Project Launching in 2026</p>
     </footer>
 
     <script>
-        // New Year Banner
+        // Smooth scroll for navigation links
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href === '#' || href.startsWith('#')) {
+                        e.preventDefault();
+                        
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            const newyearBanner = document.getElementById('newyearBanner');
-            const closeBanner = document.getElementById('closeBanner');
-            const shareWishesBtn = document.getElementById('shareNewYearWishes');
-            const newyearDecorations = document.getElementById('newyearDecorations');
-
-            // Show banner after 1 second
-            setTimeout(() => {
-                newyearBanner.classList.add('show');
-            }, 1000);
-
-            // Close banner
-            closeBanner.addEventListener('click', function() {
-                newyearBanner.style.top = '-100px';
-                setTimeout(() => {
-                    newyearBanner.style.display = 'none';
-                }, 800);
-            });
-
-            // Auto-close banner after 10 seconds
-            setTimeout(() => {
-                if (newyearBanner.classList.contains('show')) {
-                    newyearBanner.style.top = '-100px';
-                    setTimeout(() => {
-                        newyearBanner.style.display = 'none';
-                    }, 800);
-                }
-            }, 10000);
-
-            // Share New Year wishes
-            shareWishesBtn.addEventListener('click', function() {
-                const shareText = "🎊 Happy New Year 2026 from SiGi Technologies! 🚀\n\nWe're excited to announce our Open Domotics project launching in 2026 and our vision for edge computing innovation!\n\nVisit our website to learn more about open-source home technology: https://sigi-technologies.com";
-                
-                if (navigator.share) {
-                    navigator.share({
-                        title: '2026 Vision from SiGi Technologies',
-                        text: shareText,
-                        url: window.location.href
-                    });
-                } else {
-                    // Fallback for browsers that don't support Web Share API
-                    navigator.clipboard.writeText(shareText).then(() => {
-                        alert('2026 vision copied to clipboard! Share it with fellow tech enthusiasts! 🚀');
-                    });
-                }
-            });
-
-            // Create New Year decorations
-            createNewYearDecorations();
-
-            // Existing functions from original code
-            createParticles();
             setupSmoothScroll();
             
             // Add a subtle hover effect to all project cards on page load
@@ -905,145 +498,6 @@
                 });
             }, 500);
         });
-
-        // Create New Year decorations
-        function createNewYearDecorations() {
-            const container = document.getElementById('newyearDecorations');
-            const decorationCount = 25;
-            
-            for (let i = 0; i < decorationCount; i++) {
-                let decoration;
-                
-                if (i % 3 === 0) {
-                    // Confetti
-                    decoration = document.createElement('div');
-                    decoration.classList.add('confetti');
-                    
-                    // Random confetti color
-                    const colors = ['#ffd700', '#9b59b6', '#3498db', '#2ecc71', '#e74c3c'];
-                    const color = colors[Math.floor(Math.random() * colors.length)];
-                    decoration.style.backgroundColor = color;
-                    
-                    // Random size and shape
-                    const size = Math.random() * 8 + 4;
-                    decoration.style.width = `${size}px`;
-                    decoration.style.height = `${Math.random() * 8 + 4}px`;
-                    
-                    // Random position
-                    decoration.style.left = `${Math.random() * 100}%`;
-                    decoration.style.top = `${Math.random() * 100}%`;
-                    
-                    // Random rotation
-                    decoration.style.transform = `rotate(${Math.random() * 360}deg)`;
-                    
-                    // Confetti animation
-                    const duration = Math.random() * 8 + 4;
-                    decoration.style.animation = `confettiFall ${duration}s linear infinite`;
-                    
-                    // Create animation for confetti
-                    const styleSheet = document.createElement('style');
-                    const startX = Math.random() * 100;
-                    const endX = startX + Math.random() * 40 - 20;
-                    styleSheet.textContent = `
-                        @keyframes confettiFall {
-                            0% { 
-                                transform: translateY(-100px) translateX(${startX}px) rotate(0deg); 
-                                opacity: 0;
-                            }
-                            10% { opacity: 1; }
-                            90% { opacity: 0.8; }
-                            100% { 
-                                transform: translateY(500px) translateX(${endX}px) rotate(360deg); 
-                                opacity: 0;
-                            }
-                        }
-                    `;
-                    document.head.appendChild(styleSheet);
-                    
-                } else if (i % 3 === 1) {
-                    // Star
-                    decoration = document.createElement('div');
-                    decoration.classList.add('star-decoration');
-                    decoration.innerHTML = '<i class="fas fa-star"></i>';
-                    decoration.style.left = `${Math.random() * 100}%`;
-                    decoration.style.top = `${Math.random() * 100}%`;
-                    decoration.style.fontSize = `${Math.random() * 1 + 1}rem`;
-                    
-                    // Random star color
-                    const colors = ['#ffd700', '#9b59b6', '#3498db'];
-                    const color = colors[Math.floor(Math.random() * colors.length)];
-                    decoration.style.color = color;
-                    
-                    decoration.style.animationDelay = `${Math.random() * 2}s`;
-                }
-                
-                if (decoration) {
-                    container.appendChild(decoration);
-                }
-            }
-        }
-
-        // Create animated background particles
-        function createParticles() {
-            const container = document.getElementById('particles-container');
-            const particleCount = 60;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random position
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                particle.style.left = `${posX}%`;
-                particle.style.top = `${posY}%`;
-                
-                // Random size
-                const size = Math.random() * 4 + 1;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Random animation
-                const duration = Math.random() * 20 + 10;
-                particle.style.animation = `float ${duration}s infinite ease-in-out`;
-                
-                // Add animation keyframes dynamically
-                const styleSheet = document.createElement('style');
-                styleSheet.textContent = `
-                    @keyframes float {
-                        0%, 100% { transform: translate(0, 0) rotate(0deg); }
-                        25% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 50 - 25}px) rotate(90deg); }
-                        50% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg); }
-                        75% { transform: translate(${Math.random() * 50 - 25}px, ${Math.random() * 100 - 50}px) rotate(270deg); }
-                    }
-                `;
-                document.head.appendChild(styleSheet);
-                
-                container.appendChild(particle);
-            }
-        }
-
-        // Smooth scroll for navigation links
-        function setupSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    
-                    // Skip if it's not an anchor link
-                    if (href === '#' || href.startsWith('#')) {
-                        e.preventDefault();
-                        
-                        const targetElement = document.querySelector(href);
-                        if (targetElement) {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 100,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            });
-        }
     </script>
 </body>
 </html>
